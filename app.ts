@@ -4,6 +4,8 @@ import visiteurRoutes from './routes/visiteur';
 import motifRoutes from './routes/motif';
 import praticienRoutes from './routes/praticien';
 import visiteRoutes from './routes/visite';
+import portefeuilleRoutes from './routes/portefeuille';
+import { config } from 'dotenv';
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -26,6 +28,7 @@ app.use('/api/visiteurs', visiteurRoutes);
 app.use('/api/motifs', motifRoutes);
 app.use('/api/praticiens', praticienRoutes);
 app.use('/api/visites', visiteRoutes);
+app.use('/api/portefeuille', portefeuilleRoutes);
 
 // Récupérer les variables d'environnement
 const MONGODB_USERNAME = process.env.MONGODB_USERNAME;

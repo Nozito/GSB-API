@@ -4,11 +4,16 @@ import visiteurRoutes from './routes/visiteur';
 import motifRoutes from './routes/motif';
 import praticienRoutes from './routes/praticien';
 import visiteRoutes from './routes/visite';
+import medicamentRoutes from './routes/medicament';
+
 
 import dotenv from 'dotenv';
 dotenv.config();
 
+import cors from 'cors';
+
 const app = express();
+app.use(cors());
 
 // Middleware
 app.use(express.json());
@@ -26,6 +31,7 @@ app.use('/api/visiteurs', visiteurRoutes);
 app.use('/api/motifs', motifRoutes);
 app.use('/api/praticiens', praticienRoutes);
 app.use('/api/visites', visiteRoutes);
+app.use('/api/medicaments', medicamentRoutes);
 
 // Récupérer les variables d'environnement
 const MONGODB_USERNAME = process.env.MONGODB_USERNAME;

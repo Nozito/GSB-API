@@ -1,6 +1,5 @@
 import express from 'express';
 import {
-  createVisiteur,
   getVisiteurs,
   getVisiteurById,
   deleteVisiteur,
@@ -11,12 +10,11 @@ import {
 const router = express.Router();
 
 
-router.post('/', createVisiteur);
+router.post('/signup', signupValidators, signup);
+router.post('/login', login);
 router.get('/', getVisiteurs);
 router.get('/:id', getVisiteurById);
 router.delete('/:id', deleteVisiteur);
-router.post('/signup', signupValidators, signup);
-router.post('/login', login);
 
 
 export default router;

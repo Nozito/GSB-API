@@ -33,8 +33,7 @@ L’API implémente plusieurs mécanismes pour garantir la protection des donné
 ## 🔧 Installation et Configuration
 ### 1️⃣ **Cloner le projet**
 ```bash
-git clone https://github.com/mon-projet/api-gestion-rapports.git
-cd api-auth
+git clone https://github.com/Nozito/GSBP-API.git
 ```
 
 ### 2️⃣ **Installer Node.js et Express**
